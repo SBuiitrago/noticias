@@ -1,0 +1,158 @@
+{
+  "titulo": "Mis noticias",
+  "max_por_fuente": 8,
+  "max_dias": 3,
+  "secciones": [
+    {
+      "nombre": "Ciberseguridad",
+      "fuentes": [
+        {
+          "nombre": "WIRED Security",
+          "url": "https://www.wired.com/feed/category/security/latest/rss"
+        },
+        {
+          "nombre": "Krebs on Security",
+          "url": "https://krebsonsecurity.com/feed/"
+        },
+        {
+          "nombre": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/feed/"
+        },
+        {
+          "nombre": "Dark Reading",
+          "url": "https://www.darkreading.com/rss.xml"
+        },
+        {
+          "nombre": "CSO Online",
+          "url": "https://www.csoonline.com/feed/"
+        },
+        {
+          "nombre": "The Hacker News",
+          "url": "https://feeds.feedburner.com/TheHackersNews"
+        },
+        {
+          "nombre": "WeLiveSecurity",
+          "url": "https://www.welivesecurity.com/es/rss/feed/"
+        },
+        {
+          "nombre": "Computer Hoy",
+          "url": "https://computerhoy.20minutos.es/rss",
+          "filtro": [
+            "ciberseguridad",
+            "ciberataque",
+            "hacker",
+            "malware",
+            "ransomware",
+            "phishing",
+            "estafa",
+            "privacidad"
+          ]
+        },
+        {
+          "nombre": "BBC · ciberataques",
+          "url": "https://news.google.com/rss/search?q=site%3Abbc.com+%22cyber+attack%22+OR+cyberattack+when%3A7d&hl=en&gl=GB&ceid=GB:en"
+        },
+        {
+          "nombre": "Reuters · ciberseguridad",
+          "url": "https://news.google.com/rss/search?q=site%3Areuters.com+cyber+attack+OR+hackers+OR+ransomware+when%3A3d&hl=en&gl=US&ceid=US:en"
+        },
+        {
+          "nombre": "Ciberataques en España",
+          "url": "https://news.google.com/rss/search?q=ciberataque+Espa%C3%B1a+when%3A3d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Últimas noticias de ciberataques",
+          "url": "https://news.google.com/rss/search?q=ciberataque+OR+ransomware+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        }
+      ]
+    },
+    {
+      "nombre": "Actualidad",
+      "fuentes": [
+        {
+          "nombre": "El País",
+          "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/portada"
+        },
+        {
+          "nombre": "La Vanguardia",
+          "url": "https://www.lavanguardia.com/rss/home.xml"
+        },
+        {
+          "nombre": "BBC News",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "nombre": "Reuters · mundo",
+          "url": "https://news.google.com/rss/search?q=site%3Areuters.com+world+when%3A1d&hl=en&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "nombre": "Tecnología e IA",
+      "fuentes": [
+        {
+          "nombre": "Xataka",
+          "url": "https://www.xataka.com/feedburner.xml"
+        },
+        {
+          "nombre": "Hacker News",
+          "url": "https://news.ycombinator.com/rss"
+        },
+        {
+          "nombre": "BBC Technology",
+          "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+        }
+      ]
+    },
+    {
+      "nombre": "Economía y mercados",
+      "fuentes": [
+        {
+          "nombre": "Expansión",
+          "url": "https://e00-expansion.uecdn.es/rss/portada.xml"
+        },
+        {
+          "nombre": "Cinco Días",
+          "url": "https://feeds.elpais.com/mrss-s/list/ep/site/cincodias.elpais.com/portada"
+        },
+        {
+          "nombre": "elEconomista",
+          "url": "https://news.google.com/rss/search?q=site%3Aeleconomista.es+when%3A1d&hl=es&gl=ES&ceid=ES:es"
+        }
+      ]
+    },
+    {
+      "nombre": "Deportes",
+      "fuentes": [
+        {
+          "nombre": "FC Barcelona",
+          "url": "https://news.google.com/rss/search?q=%22FC+Barcelona%22+OR+Bar%C3%A7a+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Real Madrid",
+          "url": "https://news.google.com/rss/search?q=%22Real+Madrid%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Atlético de Madrid",
+          "url": "https://news.google.com/rss/search?q=%22Atl%C3%A9tico+de+Madrid%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "PSG",
+          "url": "https://news.google.com/rss/search?q=PSG+OR+%22Paris+Saint-Germain%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Real Betis",
+          "url": "https://news.google.com/rss/search?q=%22Real+Betis%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Sevilla FC",
+          "url": "https://news.google.com/rss/search?q=%22Sevilla+FC%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Málaga CF",
+          "url": "https://news.google.com/rss/search?q=%22M%C3%A1laga+CF%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        }
+      ]
+    }
+  ]
+}
