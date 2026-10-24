@@ -2,9 +2,12 @@
   "titulo": "Mis noticias",
   "max_por_fuente": 8,
   "max_dias": 3,
+  "deduplicar": true,
+  "similitud": 0.4,
   "secciones": [
     {
       "nombre": "Ciberseguridad",
+      "prioridad": 1,
       "fuentes": [
         {
           "nombre": "WIRED Security",
@@ -31,6 +34,26 @@
           "url": "https://feeds.feedburner.com/TheHackersNews"
         },
         {
+          "nombre": "SecurityWeek",
+          "url": "https://feeds.feedburner.com/Securityweek"
+        },
+        {
+          "nombre": "The Record",
+          "url": "https://therecord.media/feed"
+        },
+        {
+          "nombre": "CISA · avisos",
+          "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+          "max_dias": 7,
+          "max_por_fuente": 5
+        },
+        {
+          "nombre": "INCIBE y CCN-CERT",
+          "url": "https://news.google.com/rss/search?q=%28site%3Aincibe.es+OR+site%3Accn-cert.cni.es%29+when%3A14d&hl=es&gl=ES&ceid=ES:es",
+          "max_dias": 14,
+          "max_por_fuente": 5
+        },
+        {
           "nombre": "WeLiveSecurity",
           "url": "https://www.welivesecurity.com/es/rss/feed/"
         },
@@ -49,8 +72,17 @@
           ]
         },
         {
-          "nombre": "BBC · ciberataques",
-          "url": "https://news.google.com/rss/search?q=site%3Abbc.com+%22cyber+attack%22+OR+cyberattack+when%3A7d&hl=en&gl=GB&ceid=GB:en"
+          "nombre": "BBC · ciberseguridad",
+          "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+          "filtro": [
+            "cyber",
+            "hack",
+            "ransomware",
+            "malware",
+            "breach",
+            "scam",
+            "php"
+          ]
         },
         {
           "nombre": "Reuters · ciberseguridad",
@@ -58,16 +90,42 @@
         },
         {
           "nombre": "Ciberataques en España",
-          "url": "https://news.google.com/rss/search?q=ciberataque+Espa%C3%B1a+when%3A3d&hl=es&gl=ES&ceid=ES:es"
+          "url": "https://news.google.com/rss/search?q=ciberataque+Espa%C3%B1a+when%3A3d&hl=es&gl=ES&ceid=ES:es",
+          "filtro": [
+            "ciber",
+            "hacker",
+            "hackeo",
+            "ransomware",
+            "phishing",
+            "malware",
+            "estafa",
+            "fraude",
+            "robo de datos",
+            "filtración"
+          ]
         },
         {
           "nombre": "Últimas noticias de ciberataques",
-          "url": "https://news.google.com/rss/search?q=ciberataque+OR+ransomware+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+          "url": "https://news.google.com/rss/search?q=ciberataque+OR+ransomware+when%3A2d&hl=es&gl=ES&ceid=ES:es",
+          "filtro": [
+            "ciber",
+            "hacker",
+            "hackeo",
+            "ransomware",
+            "phishing",
+            "malware",
+            "estafa",
+            "fraude",
+            "robo de datos",
+            "filtración"
+          ]
         }
       ]
     },
     {
       "nombre": "Actualidad",
+      "prioridad": 3,
+      "max_por_fuente": 6,
       "fuentes": [
         {
           "nombre": "El País",
@@ -75,7 +133,32 @@
         },
         {
           "nombre": "La Vanguardia",
-          "url": "https://www.lavanguardia.com/rss/home.xml"
+          "url": "https://www.lavanguardia.com/rss/home.xml",
+          "excluir_url": ["/comprar/"]
+        },
+        {
+          "nombre": "El Mundo",
+          "url": "https://e00-elmundo.uecdn.es/elmundo/rss/portada.xml"
+        },
+        {
+          "nombre": "ABC",
+          "url": "https://www.abc.es/rss/2.0/portada/"
+        },
+        {
+          "nombre": "El Confidencial",
+          "url": "https://rss.elconfidencial.com/espana/"
+        },
+        {
+          "nombre": "elDiario.es",
+          "url": "https://www.eldiario.es/rss/"
+        },
+        {
+          "nombre": "Europa Press",
+          "url": "https://www.europapress.es/rss/rss.aspx"
+        },
+        {
+          "nombre": "RTVE",
+          "url": "https://www.rtve.es/api/noticias.rss"
         },
         {
           "nombre": "BBC News",
@@ -84,19 +167,112 @@
         {
           "nombre": "Reuters · mundo",
           "url": "https://news.google.com/rss/search?q=site%3Areuters.com+world+when%3A1d&hl=en&gl=US&ceid=US:en"
+        },
+        {
+          "nombre": "Al Jazeera",
+          "url": "https://www.aljazeera.com/xml/rss/all.xml"
+        },
+        {
+          "nombre": "Le Monde (en inglés)",
+          "url": "https://www.lemonde.fr/en/rss/une.xml"
+        },
+        {
+          "nombre": "DW",
+          "url": "https://rss.dw.com/xml/rss-en-all"
+        }
+      ]
+    },
+    {
+      "nombre": "Local",
+      "prioridad": 1,
+      "fuentes": [
+        {
+          "nombre": "Ara",
+          "url": "https://www.ara.cat/rss/"
+        },
+        {
+          "nombre": "betevé",
+          "url": "https://beteve.cat/feed/"
+        },
+        {
+          "nombre": "El Punt Avui",
+          "url": "https://news.google.com/rss/search?q=site%3Aelpuntavui.cat+when%3A2d&hl=ca&gl=ES&ceid=ES:ca"
+        },
+        {
+          "nombre": "3Cat",
+          "url": "https://news.google.com/rss/search?q=site%3A3cat.cat+when%3A1d&hl=ca&gl=ES&ceid=ES:ca"
+        },
+        {
+          "nombre": "El Periódico · Cataluña",
+          "url": "https://www.elperiodico.com/es/rss/rss_portada.xml",
+          "filtro": ["barcelona", "catal", "generalitat", "mossos", "rodalies", "bcn", "girona", "lleida", "tarragona", "parlament", "collboni"]
+        },
+        {
+          "nombre": "La Vanguardia · Cataluña",
+          "url": "https://www.lavanguardia.com/rss/home.xml",
+          "filtro": ["barcelona", "catal", "generalitat", "mossos", "rodalies", "bcn", "girona", "lleida", "tarragona", "parlament", "collboni"],
+          "excluir_url": ["/comprar/"]
+        },
+        {
+          "nombre": "Barcelona ciudad",
+          "url": "https://news.google.com/rss/search?q=Barcelona+%28Ajuntament+OR+Ayuntamiento+OR+Rodalies+OR+TMB+OR+Mossos+OR+Metro%29+when%3A2d&hl=es&gl=ES&ceid=ES:es"
         }
       ]
     },
     {
       "nombre": "Tecnología e IA",
+      "prioridad": 2,
       "fuentes": [
         {
           "nombre": "Xataka",
-          "url": "https://www.xataka.com/feedburner.xml"
+          "url": "https://www.xataka.com/feedburner.xml",
+          "excluir_url": ["/magnet/", "/medicina-y-salud/", "/ecologia-y-naturaleza/", "/videojuegos/"]
+        },
+        {
+          "nombre": "Genbeta",
+          "url": "https://www.genbeta.com/feedburner.xml"
+        },
+        {
+          "nombre": "Hipertextual",
+          "url": "https://hipertextual.com/feed"
+        },
+        {
+          "nombre": "The Verge",
+          "url": "https://www.theverge.com/rss/index.xml"
+        },
+        {
+          "nombre": "Ars Technica",
+          "url": "https://feeds.arstechnica.com/arstechnica/index"
+        },
+        {
+          "nombre": "TechCrunch",
+          "url": "https://techcrunch.com/feed/"
+        },
+        {
+          "nombre": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/feed/"
         },
         {
           "nombre": "Hacker News",
           "url": "https://news.ycombinator.com/rss"
+        },
+        {
+          "nombre": "OpenAI",
+          "url": "https://openai.com/news/rss.xml",
+          "max_dias": 30,
+          "max_por_fuente": 4
+        },
+        {
+          "nombre": "Google DeepMind",
+          "url": "https://deepmind.google/blog/rss.xml",
+          "max_dias": 30,
+          "max_por_fuente": 4
+        },
+        {
+          "nombre": "Anthropic",
+          "url": "https://news.google.com/rss/search?q=site%3Aanthropic.com+when%3A30d&hl=en&gl=US&ceid=US:en",
+          "max_dias": 30,
+          "max_por_fuente": 4
         },
         {
           "nombre": "BBC Technology",
@@ -105,7 +281,62 @@
       ]
     },
     {
+      "nombre": "Ciencia y salud",
+      "prioridad": 1,
+      "fuentes": [
+        {
+          "nombre": "Xataka · salud y naturaleza",
+          "url": "https://www.xataka.com/feedburner.xml",
+          "incluir_url": ["/medicina-y-salud/", "/ecologia-y-naturaleza/"]
+        },
+        {
+          "nombre": "El País · Ciencia",
+          "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/ciencia/portada"
+        },
+        {
+          "nombre": "El País · Salud",
+          "url": "https://news.google.com/rss/search?q=site%3Aelpais.com%2Fsalud-y-bienestar+when%3A3d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Agencia SINC",
+          "url": "https://news.google.com/rss/search?q=site%3Aagenciasinc.es+when%3A7d&hl=es&gl=ES&ceid=ES:es",
+          "max_dias": 7
+        },
+        {
+          "nombre": "Science News",
+          "url": "https://www.sciencenews.org/feed"
+        },
+        {
+          "nombre": "New Scientist",
+          "url": "https://www.newscientist.com/feed/home/"
+        },
+        {
+          "nombre": "Nature",
+          "url": "https://www.nature.com/nature.rss",
+          "max_dias": 7,
+          "max_por_fuente": 5
+        },
+        {
+          "nombre": "STAT",
+          "url": "https://www.statnews.com/feed/"
+        },
+        {
+          "nombre": "OMS",
+          "url": "https://www.who.int/rss-feeds/news-english.xml",
+          "max_dias": 14,
+          "max_por_fuente": 5
+        },
+        {
+          "nombre": "NASA",
+          "url": "https://www.nasa.gov/news-release/feed/",
+          "max_dias": 7,
+          "max_por_fuente": 5
+        }
+      ]
+    },
+    {
       "nombre": "Economía y mercados",
+      "prioridad": 2,
       "fuentes": [
         {
           "nombre": "Expansión",
@@ -117,12 +348,33 @@
         },
         {
           "nombre": "elEconomista",
-          "url": "https://news.google.com/rss/search?q=site%3Aeleconomista.es+when%3A1d&hl=es&gl=ES&ceid=ES:es"
+          "url": "https://news.google.com/rss/search?q=site%3Aeleconomista.es+%28bolsa+OR+Ibex+OR+empresas+OR+banca+OR+econom%C3%ADa+OR+mercados%29+when%3A1d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Investing.com España",
+          "url": "https://es.investing.com/rss/news.rss"
+        },
+        {
+          "nombre": "Financial Times",
+          "url": "https://www.ft.com/rss/home"
+        },
+        {
+          "nombre": "Bloomberg · mercados",
+          "url": "https://feeds.bloomberg.com/markets/news.rss"
+        },
+        {
+          "nombre": "Reuters · negocios",
+          "url": "https://news.google.com/rss/search?q=site%3Areuters.com+%28markets+OR+stocks+OR+economy+OR+business%29+when%3A1d&hl=en&gl=US&ceid=US:en"
+        },
+        {
+          "nombre": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/news/rssindex"
         }
       ]
     },
     {
       "nombre": "Deportes",
+      "prioridad": 1,
       "fuentes": [
         {
           "nombre": "FC Barcelona",
@@ -151,6 +403,147 @@
         {
           "nombre": "Málaga CF",
           "url": "https://news.google.com/rss/search?q=%22M%C3%A1laga+CF%22+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        }
+      ]
+    },
+    {
+      "nombre": "F1 y motor",
+      "prioridad": 0,
+      "fuentes": [
+        {
+          "nombre": "Motorsport.com · F1",
+          "url": "https://es.motorsport.com/rss/f1/news/"
+        },
+        {
+          "nombre": "Fórmula 1 en prensa española",
+          "url": "https://news.google.com/rss/search?q=%22F%C3%B3rmula+1%22+when%3A1d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Autosport · F1",
+          "url": "https://www.autosport.com/rss/feed/f1"
+        },
+        {
+          "nombre": "RaceFans",
+          "url": "https://www.racefans.net/feed/"
+        },
+        {
+          "nombre": "The Race",
+          "url": "https://the-race.com/feed/"
+        },
+        {
+          "nombre": "Formula1.com",
+          "url": "https://www.formula1.com/content/fom-website/en/latest/all.xml"
+        },
+        {
+          "nombre": "Resistencia y GT (Le Mans, WEC, Nürburgring)",
+          "url": "https://sportscar365.com/feed/"
+        },
+        {
+          "nombre": "24 Horas de Le Mans y WEC",
+          "url": "https://news.google.com/rss/search?q=%2224+Horas+de+Le+Mans%22+OR+%2224+Hours+of+Le+Mans%22+OR+%22Mundial+de+Resistencia%22+OR+WEC+when%3A7d&hl=es&gl=ES&ceid=ES:es",
+          "max_dias": 7
+        },
+        {
+          "nombre": "Nürburgring",
+          "url": "https://news.google.com/rss/search?q=N%C3%BCrburgring+OR+Nurburgring+when%3A7d&hl=es&gl=ES&ceid=ES:es",
+          "max_dias": 7
+        },
+        {
+          "nombre": "Rally (WRC y RACC)",
+          "url": "https://news.google.com/rss/search?q=WRC+OR+%22Mundial+de+Rallys%22+OR+%22Rally+RACC%22+OR+%22Rally+de+Espa%C3%B1a%22+when%3A3d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "DirtFish · rally",
+          "url": "https://dirtfish.com/feed/"
+        }
+      ]
+    },
+    {
+      "nombre": "Juegos Olímpicos",
+      "prioridad": 0,
+      "activa": [
+        { "desde": "2028-07-01", "hasta": "2028-09-03" },
+        { "desde": "2030-01-18", "hasta": "2030-03-15" }
+      ],
+      "fuentes": [
+        {
+          "nombre": "Juegos Olímpicos y Paralímpicos",
+          "url": "https://news.google.com/rss/search?q=%22Juegos+Ol%C3%ADmpicos%22+OR+Ol%C3%ADmpicos+OR+Paral%C3%ADmpicos+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Olympics (en inglés)",
+          "url": "https://news.google.com/rss/search?q=Olympics+OR+Paralympics+when%3A2d&hl=en&gl=US&ceid=US:en"
+        },
+        {
+          "nombre": "Comité Olímpico Español",
+          "url": "https://news.google.com/rss/search?q=%22Comit%C3%A9+Ol%C3%ADmpico+Espa%C3%B1ol%22+OR+%22Equipo+Ol%C3%ADmpico%22+when%3A7d&hl=es&gl=ES&ceid=ES:es",
+          "max_dias": 7
+        }
+      ]
+    },
+    {
+      "nombre": "Videojuegos",
+      "prioridad": 1,
+      "fuentes": [
+        {
+          "nombre": "IGN España",
+          "url": "https://es.ign.com/feed.xml"
+        },
+        {
+          "nombre": "Vidaextra",
+          "url": "https://www.vidaextra.com/feedburner.xml"
+        },
+        {
+          "nombre": "Xataka · videojuegos",
+          "url": "https://www.xataka.com/feedburner.xml",
+          "incluir_url": ["/videojuegos/"]
+        },
+        {
+          "nombre": "Vandal",
+          "url": "https://news.google.com/rss/search?q=site%3Avandal.elespanol.com+when%3A2d&hl=es&gl=ES&ceid=ES:es"
+        },
+        {
+          "nombre": "Eurogamer",
+          "url": "https://www.eurogamer.net/feed"
+        },
+        {
+          "nombre": "PC Gamer",
+          "url": "https://www.pcgamer.com/rss/"
+        },
+        {
+          "nombre": "Polygon",
+          "url": "https://www.polygon.com/rss/index.xml"
+        }
+      ]
+    },
+    {
+      "nombre": "Cultura",
+      "prioridad": 1,
+      "fuentes": [
+        {
+          "nombre": "El País · Cultura",
+          "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/cultura/portada"
+        },
+        {
+          "nombre": "La Vanguardia · Cultura",
+          "url": "https://www.lavanguardia.com/rss/cultura.xml"
+        },
+        {
+          "nombre": "El Mundo · Cultura",
+          "url": "https://e00-elmundo.uecdn.es/elmundo/rss/cultura.xml"
+        },
+        {
+          "nombre": "Xataka Magnet",
+          "url": "https://www.xataka.com/feedburner.xml",
+          "incluir_url": ["/magnet/"]
+        },
+        {
+          "nombre": "The Guardian · Culture",
+          "url": "https://www.theguardian.com/culture/rss"
+        },
+        {
+          "nombre": "BBC · Arts",
+          "url": "https://feeds.bbci.co.uk/news/entertainment_and_arts/rss.xml"
         }
       ]
     }
