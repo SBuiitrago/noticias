@@ -39,7 +39,7 @@
         },
         {
           "nombre": "CISA · avisos",
-          "url": "https://www.cisa.gov/cybersecurity-advisories/all.xml",
+          "url": "https://news.google.com/rss/search?q=site%3Acisa.gov+%28advisory+OR+vulnerability+OR+exploited%29+when%3A7d&hl=en&gl=US&ceid=US:en",
           "max_dias": 7,
           "max_por_fuente": 5
         },
@@ -154,7 +154,7 @@
         },
         {
           "nombre": "RTVE",
-          "url": "https://www.rtve.es/api/noticias.rss"
+          "url": "https://news.google.com/rss/search?q=site%3Artve.es+when%3A1d&hl=es&gl=ES&ceid=ES:es"
         },
         {
           "nombre": "BBC News",
@@ -196,8 +196,7 @@
         },
         {
           "nombre": "El Periódico · Cataluña",
-          "url": "https://www.elperiodico.com/es/rss/rss_portada.xml",
-          "filtro": ["barcelona", "catal", "generalitat", "mossos", "rodalies", "bcn", "girona", "lleida", "tarragona", "parlament", "collboni"]
+          "url": "https://news.google.com/rss/search?q=site%3Aelperiodico.com+%28Barcelona+OR+Catalunya+OR+Mossos+OR+Rodalies%29+when%3A2d&hl=es&gl=ES&ceid=ES:es"
         },
         {
           "nombre": "La Vanguardia · Cataluña",
@@ -334,7 +333,7 @@
         },
         {
           "nombre": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/news/rssindex"
+          "url": "https://news.google.com/rss/search?q=site%3Afinance.yahoo.com+when%3A1d&hl=en&gl=US&ceid=US:en"
         }
       ]
     },
