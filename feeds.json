@@ -10,10 +10,6 @@
       "prioridad": 1,
       "fuentes": [
         {
-          "nombre": "WIRED Security",
-          "url": "https://www.wired.com/feed/category/security/latest/rss"
-        },
-        {
           "nombre": "Krebs on Security",
           "url": "https://krebsonsecurity.com/feed/"
         },
@@ -173,10 +169,6 @@
           "url": "https://www.aljazeera.com/xml/rss/all.xml"
         },
         {
-          "nombre": "Le Monde (en inglés)",
-          "url": "https://www.lemonde.fr/en/rss/une.xml"
-        },
-        {
           "nombre": "DW",
           "url": "https://rss.dw.com/xml/rss-en-all"
         }
@@ -249,10 +241,6 @@
           "url": "https://techcrunch.com/feed/"
         },
         {
-          "nombre": "MIT Technology Review",
-          "url": "https://www.technologyreview.com/feed/"
-        },
-        {
           "nombre": "Hacker News",
           "url": "https://news.ycombinator.com/rss"
         },
@@ -307,20 +295,6 @@
           "url": "https://www.sciencenews.org/feed"
         },
         {
-          "nombre": "New Scientist",
-          "url": "https://www.newscientist.com/feed/home/"
-        },
-        {
-          "nombre": "Nature",
-          "url": "https://www.nature.com/nature.rss",
-          "max_dias": 7,
-          "max_por_fuente": 5
-        },
-        {
-          "nombre": "STAT",
-          "url": "https://www.statnews.com/feed/"
-        },
-        {
           "nombre": "OMS",
           "url": "https://www.who.int/rss-feeds/news-english.xml",
           "max_dias": 14,
@@ -353,14 +327,6 @@
         {
           "nombre": "Investing.com España",
           "url": "https://es.investing.com/rss/news.rss"
-        },
-        {
-          "nombre": "Financial Times",
-          "url": "https://www.ft.com/rss/home"
-        },
-        {
-          "nombre": "Bloomberg · mercados",
-          "url": "https://feeds.bloomberg.com/markets/news.rss"
         },
         {
           "nombre": "Reuters · negocios",
