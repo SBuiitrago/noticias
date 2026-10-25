@@ -2,8 +2,8 @@ name: Actualizar noticias
 
 on:
   schedule:
-    - cron: "30 4 * * *"
-  workflow_dispatch:
+    - cron: "17 5 * * *"  
+  workflow_dispatch:      
   push:
     branches: [main]
 
